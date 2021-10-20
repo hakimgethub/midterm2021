@@ -63,9 +63,9 @@ public class UseArrayList {
 		list = ar;
 
 
-		ConnectDB ct = new ConnectDB();
+		ConnectToSqlDB ct = new ConnectToSqlDB();
 
-		ct.insertDataFromArrayListToMySql(list, "ArrayList", "ArrayData");
+		ct.insertDataFromArrayListToSqlTable(list, "ArrayList", "ArrayData");
 
 		List<String> numbers = ct.readDataBase("ArrayList", "ArrayData");
 		for (String st : numbers) {
@@ -76,8 +76,6 @@ public class UseArrayList {
 	}
 
 }
-
-
 
 
 
